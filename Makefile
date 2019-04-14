@@ -20,6 +20,8 @@ EXTRA_CFLAGS += -I$(src)/include
 EXTRA_CFLAGS += -I$(src)/hal/phydm
 
 EXTRA_LDFLAGS += --strip-debug
+# added per instructions of https://askubuntu.com/questions/1062402/cant-find-wifi-drivers-for-0bdaf179-realtek-semiconductor-corp
+EXTRA_LDFLAGS += -Wno-error=date=time
 
 CONFIG_AUTOCFG_CP = n
 
